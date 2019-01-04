@@ -1,12 +1,20 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataBaseLibrary.Models
 {
-    class Image
+    [Table("ImageTable")]
+    internal class Image
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long ImageId { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public byte[] File { get; set; }
+
     }
 }

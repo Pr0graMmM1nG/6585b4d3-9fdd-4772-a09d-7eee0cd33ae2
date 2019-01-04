@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataBaseLibrary.Models
 {
-    class Resource
+    [Table("ResourceTable")]
+    internal class Resource
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long ResourceId { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public string Details { get; set; }
+
+        [ForeignKey("ImageId")]
+        public Image Image { get; set; }
+
+        
     }
 }
