@@ -42,6 +42,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleForm\ConsoleForm.csproj">
+      <Project>{cf055f67-3418-4a61-87f6-1456ad0db498}</Project>
+      <Name>ConsoleForm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataBaseLibrary\DataBaseLibrary.csproj">
       <Project>{b4db1aaa-1f1d-4099-9b4d-86e0b695c683}</Project>
       <Name>DataBaseLibrary</Name>
@@ -50,9 +54,9 @@
       <Project>{6186375f-7054-48c5-8d39-748b1d5c5daf}</Project>
       <Name>ImportLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PriceWindowsForm\PriceWindowsForm.csproj">
+    <ProjectReference Include="..\PriceWindowsForm\WindowsForm.csproj">
       <Project>{25d14a1e-3c7c-473c-81ca-0b84ae88a444}</Project>
-      <Name>PriceWindowsForm</Name>
+      <Name>WindowsForm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

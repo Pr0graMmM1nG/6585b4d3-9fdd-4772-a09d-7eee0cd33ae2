@@ -1,4 +1,4 @@
-﻿namespace PriceWindowsForm
+﻿namespace WindowsForm
 {
     partial class MainWindows
     {

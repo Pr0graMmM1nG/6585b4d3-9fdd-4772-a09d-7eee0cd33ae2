@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DataBaseLibrary.Models
 {
     [Table("ResourceTable")]
-    internal class Resource
+   public class Resource
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ResourceId { get; set; }
@@ -14,7 +14,7 @@ namespace DataBaseLibrary.Models
 
         public string Details { get; set; }
 
-        [ForeignKey("ImageId")]
+        
         public Image Image { get; set; }
 
         

@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace DataBaseLibrary.Context
 {
-    class PriceListContext:DbContext
+   public class PriceListContext:DbContext
     {
         public virtual DbSet<Furnizor> Furnizors { get; set; }
         public virtual DbSet<Image> Images { get; set; }

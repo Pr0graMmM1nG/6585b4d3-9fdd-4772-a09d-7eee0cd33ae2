@@ -15,22 +15,27 @@ namespace PriceList
             switch (UserKeyResponse.Key)
             {
                 case ConsoleKey.C:
-                   // Console.Write("Waiting for Console");
-                   // System.Threading.Thread.Sleep(3000);
-                   //999Console.Console999.Main();
-                break;
+                    SwitchVariant("Waiting for Console");
+                    break;
                 case ConsoleKey.W:
-                    Console.Write("Waiting for Windows");
-                    System.Threading.Thread.Sleep(3000);
-                    PriceWindowsForm.StartWindows.Main();
+                    SwitchVariant("Waiting for Windows");
                     break;
                 default:
-                    Console.WriteLine("Exit");
-                    System.Threading.Thread.Sleep(3000);
+                    SwitchVariant("Exit");
                     break;
             }
+           
 
 
+        }
+
+      
+
+        private static void SwitchVariant(string Message)
+        {
+            Console.Write(Message);
+            System.Threading.Thread.Sleep(3000);
+            ConsoleForm.StartConsole.Main();
         }
     }
 }

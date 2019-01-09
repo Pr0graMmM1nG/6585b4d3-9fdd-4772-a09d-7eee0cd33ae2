@@ -5,15 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DataBaseLibrary.Models
 {
     [Table("PriceTable")]
-    internal class Price
+    public class Price
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long IdPrice { get; set; }
+        public long PriceId { get; set; }
 
-        [ForeignKey("ResourceId")]
+       
         public Resource Resource { get; set; }
 
-        [ForeignKey("UnitsId")]
+        
         public Units Unit { get; set; }
 
         [Required]
@@ -22,7 +22,7 @@ namespace DataBaseLibrary.Models
         [Required]
         public DateTime Data { get; set; }
 
-        [ForeignKey("FurnizorId")]
+        
         public Furnizor Furnizor { get; set; }
     }
 }

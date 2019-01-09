@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DataBaseLibrary.Models
 {
     [Table("ImageTable")]
-    internal class Image
+    public class Image
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ImageId { get; set; }

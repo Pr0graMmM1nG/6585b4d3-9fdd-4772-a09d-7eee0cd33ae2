@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 namespace DataBaseLibrary.Models
 {
     [Table("UnitsTable")]
-    internal class Units
+    public class Units
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ForeignKey("Price")]
-        public long IdUnits { get; set; }
+        public long UnitsId { get; set; }
 
         [Required]
         public string Name { get; set; }

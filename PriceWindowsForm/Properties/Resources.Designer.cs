@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PriceWindowsForm.Properties
+namespace WindowsForm.Properties
 {
 
 

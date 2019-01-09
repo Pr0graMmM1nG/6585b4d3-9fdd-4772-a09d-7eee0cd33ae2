@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataBaseLibrary.Repository.SQLite
 {
-    class CRUD
+   public class CRUD
     {
         private readonly PriceListContext _context;
         public CRUD()
