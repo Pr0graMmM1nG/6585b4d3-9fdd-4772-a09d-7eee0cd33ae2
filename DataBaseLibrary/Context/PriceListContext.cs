@@ -16,12 +16,15 @@ namespace DataBaseLibrary.Context
         : base("default")
         { }
 
+       
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             var sqliteConnectionInitializer = new SqliteCreateDatabaseIfNotExists<PriceListContext>(modelBuilder);
             Database.SetInitializer(sqliteConnectionInitializer);
 
         }
+
+       
 
     }
 }

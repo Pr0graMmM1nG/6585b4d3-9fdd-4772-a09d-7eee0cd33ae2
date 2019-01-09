@@ -7,6 +7,7 @@ namespace PriceList
     {
         private static void Main()
         {
+            
             var GetUserInput=ShowMenu();
 
             switch (GetUserInput.Key)
