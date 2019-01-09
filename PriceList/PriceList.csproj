@@ -54,7 +54,7 @@
       <Project>{6186375f-7054-48c5-8d39-748b1d5c5daf}</Project>
       <Name>ImportLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PriceWindowsForm\WindowsForm.csproj">
+    <ProjectReference Include="..\WindowsForm\WindowsForm.csproj">
       <Project>{25d14a1e-3c7c-473c-81ca-0b84ae88a444}</Project>
       <Name>WindowsForm</Name>
     </ProjectReference>

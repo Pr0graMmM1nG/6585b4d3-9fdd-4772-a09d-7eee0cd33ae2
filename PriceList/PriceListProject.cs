@@ -7,21 +7,20 @@ namespace PriceList
     {
         private static void Main()
         {
-            Console.SetWindowPosition(0, 0);
-            Console.WriteLine("Enter Windows Mode Console (C) Windows (W)");
-            var UserKeyResponse = Console.ReadKey(true);
-            Console.Write("Input {0}", UserKeyResponse.Key);
-            Console.Write(Environment.NewLine);
-            switch (UserKeyResponse.Key)
+            var GetUserInput=ShowMenu();
+
+            switch (GetUserInput.Key)
             {
                 case ConsoleKey.C:
-                    SwitchVariant("Waiting for Console");
+                    MessageOutput("Waiting for Console");
+                    WindowsForm.StartConsole.Main();
                     break;
                 case ConsoleKey.W:
-                    SwitchVariant("Waiting for Windows");
+                    MessageOutput("Waiting for Windows");
+                    WindowsForm.StartWindows.Main();
                     break;
                 default:
-                    SwitchVariant("Exit");
+                    MessageOutput("Exit");
                     break;
             }
            
@@ -31,11 +30,22 @@ namespace PriceList
 
       
 
-        private static void SwitchVariant(string Message)
+        private static void MessageOutput(string Message)
         {
             Console.Write(Message);
             System.Threading.Thread.Sleep(3000);
-            ConsoleForm.StartConsole.Main();
+            
+                      
+        }
+
+        private static ConsoleKeyInfo ShowMenu()
+        {
+            Console.SetWindowPosition(0, 0);
+            Console.WriteLine("Enter Windows Mode Console (C) Windows (W)");
+            var UserKeyResponse = Console.ReadKey(true);
+            Console.Write("Input {0}", UserKeyResponse.Key);
+            Console.Write(Environment.NewLine);
+            return UserKeyResponse;
         }
     }
 }
