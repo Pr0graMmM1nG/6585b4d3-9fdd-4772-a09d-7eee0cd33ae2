@@ -35,5 +35,25 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PriceListProject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseLibrary\DataBaseLibrary.csproj">
+      <Project>{b4db1aaa-1f1d-4099-9b4d-86e0b695c683}</Project>
+      <Name>DataBaseLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImportLibrary\ImportLibrary.csproj">
+      <Project>{6186375f-7054-48c5-8d39-748b1d5c5daf}</Project>
+      <Name>ImportLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PriceWindowsForm\PriceWindowsForm.csproj">
+      <Project>{25d14a1e-3c7c-473c-81ca-0b84ae88a444}</Project>
+      <Name>PriceWindowsForm</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

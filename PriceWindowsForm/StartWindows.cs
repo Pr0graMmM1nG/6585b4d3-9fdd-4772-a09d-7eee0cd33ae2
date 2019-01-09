@@ -6,17 +6,17 @@ using System.Windows.Forms;
 
 namespace PriceWindowsForm
 {
-    static class Program
+    public static class StartWindows
     {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+       public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainWindows());
         }
     }
 }
