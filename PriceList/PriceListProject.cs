@@ -5,6 +5,7 @@ namespace PriceList
 {
     class PriceListProject
     {
+        [STAThread]
         private static void Main()
         {
             

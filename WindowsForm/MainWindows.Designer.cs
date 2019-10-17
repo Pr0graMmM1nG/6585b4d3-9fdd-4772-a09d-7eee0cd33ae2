@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtBxSearch = new System.Windows.Forms.TextBox();
             this.lblFind = new System.Windows.Forms.Label();
+            this.txtBxSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.grBxMain = new System.Windows.Forms.GroupBox();
-            this.lblFurnizorName = new System.Windows.Forms.Label();
-            this.txtBxPriceValue = new System.Windows.Forms.TextBox();
-            this.pictureBxResource = new System.Windows.Forms.PictureBox();
-            this.cmBxFurnizorName = new System.Windows.Forms.ComboBox();
-            this.lblResourceName = new System.Windows.Forms.Label();
-            this.cmBxResourceName = new System.Windows.Forms.ComboBox();
-            this.lblUnits = new System.Windows.Forms.Label();
-            this.cmBxUnits = new System.Windows.Forms.ComboBox();
-            this.lblPriceValue = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dateTimeCalendar = new System.Windows.Forms.DateTimePicker();
             this.lblData = new System.Windows.Forms.Label();
+            this.dateTimeCalendar = new System.Windows.Forms.DateTimePicker();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblPriceValue = new System.Windows.Forms.Label();
+            this.cmBxUnits = new System.Windows.Forms.ComboBox();
+            this.lblUnits = new System.Windows.Forms.Label();
+            this.cmBxResourceName = new System.Windows.Forms.ComboBox();
+            this.lblResourceName = new System.Windows.Forms.Label();
+            this.cmBxFurnizorName = new System.Windows.Forms.ComboBox();
+            this.pictureBxResource = new System.Windows.Forms.PictureBox();
+            this.txtBxPriceValue = new System.Windows.Forms.TextBox();
+            this.lblFurnizorName = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +57,7 @@
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControlMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -78,22 +79,6 @@
             this.panel1.Size = new System.Drawing.Size(778, 29);
             this.panel1.TabIndex = 4;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(694, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 22);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txtBxSearch
-            // 
-            this.txtBxSearch.Location = new System.Drawing.Point(46, 2);
-            this.txtBxSearch.Name = "txtBxSearch";
-            this.txtBxSearch.Size = new System.Drawing.Size(642, 24);
-            this.txtBxSearch.TabIndex = 1;
-            // 
             // lblFind
             // 
             this.lblFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -105,10 +90,27 @@
             this.lblFind.TabIndex = 13;
             this.lblFind.Text = "Find";
             // 
+            // txtBxSearch
+            // 
+            this.txtBxSearch.Location = new System.Drawing.Point(46, 2);
+            this.txtBxSearch.Name = "txtBxSearch";
+            this.txtBxSearch.Size = new System.Drawing.Size(642, 24);
+            this.txtBxSearch.TabIndex = 1;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(694, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 22);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // tabControlMain
             // 
             this.tabControlMain.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControlMain.Controls.Add(this.tabPage1);
+            this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Location = new System.Drawing.Point(2, 225);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
@@ -168,104 +170,26 @@
             this.grBxMain.TabStop = false;
             this.grBxMain.Text = "Resource";
             // 
-            // lblFurnizorName
+            // lblData
             // 
-            this.lblFurnizorName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblFurnizorName.AutoSize = true;
-            this.lblFurnizorName.Location = new System.Drawing.Point(73, 25);
-            this.lblFurnizorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFurnizorName.Name = "lblFurnizorName";
-            this.lblFurnizorName.Size = new System.Drawing.Size(57, 16);
-            this.lblFurnizorName.TabIndex = 0;
-            this.lblFurnizorName.Text = "Furnizor";
+            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(390, 47);
+            this.lblData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(33, 16);
+            this.lblData.TabIndex = 12;
+            this.lblData.Text = "Data";
             // 
-            // txtBxPriceValue
+            // dateTimeCalendar
             // 
-            this.txtBxPriceValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtBxPriceValue.BackColor = System.Drawing.Color.White;
-            this.txtBxPriceValue.Location = new System.Drawing.Point(204, 138);
-            this.txtBxPriceValue.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.txtBxPriceValue.Name = "txtBxPriceValue";
-            this.txtBxPriceValue.Size = new System.Drawing.Size(195, 24);
-            this.txtBxPriceValue.TabIndex = 1;
-            this.txtBxPriceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBxPriceValue.Click += new System.EventHandler(this.txtBxPriceValue_Click);
-            // 
-            // pictureBxResource
-            // 
-            this.pictureBxResource.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBxResource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBxResource.Location = new System.Drawing.Point(622, 26);
-            this.pictureBxResource.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.pictureBxResource.Name = "pictureBxResource";
-            this.pictureBxResource.Size = new System.Drawing.Size(149, 141);
-            this.pictureBxResource.TabIndex = 2;
-            this.pictureBxResource.TabStop = false;
-            // 
-            // cmBxFurnizorName
-            // 
-            this.cmBxFurnizorName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmBxFurnizorName.BackColor = System.Drawing.Color.White;
-            this.cmBxFurnizorName.FormattingEnabled = true;
-            this.cmBxFurnizorName.Location = new System.Drawing.Point(70, 43);
-            this.cmBxFurnizorName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.cmBxFurnizorName.Name = "cmBxFurnizorName";
-            this.cmBxFurnizorName.Size = new System.Drawing.Size(200, 24);
-            this.cmBxFurnizorName.TabIndex = 3;
-            // 
-            // lblResourceName
-            // 
-            this.lblResourceName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblResourceName.AutoSize = true;
-            this.lblResourceName.Location = new System.Drawing.Point(73, 73);
-            this.lblResourceName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblResourceName.Name = "lblResourceName";
-            this.lblResourceName.Size = new System.Drawing.Size(62, 16);
-            this.lblResourceName.TabIndex = 4;
-            this.lblResourceName.Text = "Resource";
-            // 
-            // cmBxResourceName
-            // 
-            this.cmBxResourceName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmBxResourceName.BackColor = System.Drawing.Color.White;
-            this.cmBxResourceName.FormattingEnabled = true;
-            this.cmBxResourceName.Location = new System.Drawing.Point(70, 91);
-            this.cmBxResourceName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.cmBxResourceName.Name = "cmBxResourceName";
-            this.cmBxResourceName.Size = new System.Drawing.Size(531, 24);
-            this.cmBxResourceName.TabIndex = 5;
-            // 
-            // lblUnits
-            // 
-            this.lblUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblUnits.AutoSize = true;
-            this.lblUnits.Location = new System.Drawing.Point(73, 120);
-            this.lblUnits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUnits.Name = "lblUnits";
-            this.lblUnits.Size = new System.Drawing.Size(40, 16);
-            this.lblUnits.TabIndex = 6;
-            this.lblUnits.Text = "Units";
-            // 
-            // cmBxUnits
-            // 
-            this.cmBxUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmBxUnits.FormattingEnabled = true;
-            this.cmBxUnits.Location = new System.Drawing.Point(69, 138);
-            this.cmBxUnits.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.cmBxUnits.Name = "cmBxUnits";
-            this.cmBxUnits.Size = new System.Drawing.Size(108, 24);
-            this.cmBxUnits.TabIndex = 7;
-            // 
-            // lblPriceValue
-            // 
-            this.lblPriceValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblPriceValue.AutoSize = true;
-            this.lblPriceValue.Location = new System.Drawing.Point(207, 119);
-            this.lblPriceValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPriceValue.Name = "lblPriceValue";
-            this.lblPriceValue.Size = new System.Drawing.Size(73, 16);
-            this.lblPriceValue.TabIndex = 8;
-            this.lblPriceValue.Text = "Price Value";
+            this.dateTimeCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateTimeCalendar.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimeCalendar.Location = new System.Drawing.Point(427, 43);
+            this.dateTimeCalendar.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.dateTimeCalendar.Name = "dateTimeCalendar";
+            this.dateTimeCalendar.Size = new System.Drawing.Size(174, 24);
+            this.dateTimeCalendar.TabIndex = 11;
             // 
             // btnSave
             // 
@@ -279,26 +203,109 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dateTimeCalendar
+            // lblPriceValue
             // 
-            this.dateTimeCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dateTimeCalendar.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimeCalendar.Location = new System.Drawing.Point(427, 43);
-            this.dateTimeCalendar.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.dateTimeCalendar.Name = "dateTimeCalendar";
-            this.dateTimeCalendar.Size = new System.Drawing.Size(174, 24);
-            this.dateTimeCalendar.TabIndex = 11;
+            this.lblPriceValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblPriceValue.AutoSize = true;
+            this.lblPriceValue.Location = new System.Drawing.Point(207, 119);
+            this.lblPriceValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPriceValue.Name = "lblPriceValue";
+            this.lblPriceValue.Size = new System.Drawing.Size(73, 16);
+            this.lblPriceValue.TabIndex = 8;
+            this.lblPriceValue.Text = "Price Value";
             // 
-            // lblData
+            // cmBxUnits
             // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(390, 47);
-            this.lblData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(33, 16);
-            this.lblData.TabIndex = 12;
-            this.lblData.Text = "Data";
+            this.cmBxUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmBxUnits.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmBxUnits.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmBxUnits.FormattingEnabled = true;
+            this.cmBxUnits.Location = new System.Drawing.Point(69, 138);
+            this.cmBxUnits.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.cmBxUnits.Name = "cmBxUnits";
+            this.cmBxUnits.Size = new System.Drawing.Size(108, 24);
+            this.cmBxUnits.TabIndex = 7;
+            // 
+            // lblUnits
+            // 
+            this.lblUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblUnits.AutoSize = true;
+            this.lblUnits.Location = new System.Drawing.Point(73, 120);
+            this.lblUnits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUnits.Name = "lblUnits";
+            this.lblUnits.Size = new System.Drawing.Size(40, 16);
+            this.lblUnits.TabIndex = 6;
+            this.lblUnits.Text = "Units";
+            // 
+            // cmBxResourceName
+            // 
+            this.cmBxResourceName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmBxResourceName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmBxResourceName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmBxResourceName.BackColor = System.Drawing.Color.White;
+            this.cmBxResourceName.FormattingEnabled = true;
+            this.cmBxResourceName.Location = new System.Drawing.Point(70, 91);
+            this.cmBxResourceName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.cmBxResourceName.Name = "cmBxResourceName";
+            this.cmBxResourceName.Size = new System.Drawing.Size(531, 24);
+            this.cmBxResourceName.TabIndex = 5;
+            // 
+            // lblResourceName
+            // 
+            this.lblResourceName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblResourceName.AutoSize = true;
+            this.lblResourceName.Location = new System.Drawing.Point(73, 73);
+            this.lblResourceName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResourceName.Name = "lblResourceName";
+            this.lblResourceName.Size = new System.Drawing.Size(62, 16);
+            this.lblResourceName.TabIndex = 4;
+            this.lblResourceName.Text = "Resource";
+            // 
+            // cmBxFurnizorName
+            // 
+            this.cmBxFurnizorName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmBxFurnizorName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmBxFurnizorName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmBxFurnizorName.BackColor = System.Drawing.Color.White;
+            this.cmBxFurnizorName.FormattingEnabled = true;
+            this.cmBxFurnizorName.Location = new System.Drawing.Point(70, 43);
+            this.cmBxFurnizorName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.cmBxFurnizorName.Name = "cmBxFurnizorName";
+            this.cmBxFurnizorName.Size = new System.Drawing.Size(200, 24);
+            this.cmBxFurnizorName.TabIndex = 3;
+            // 
+            // pictureBxResource
+            // 
+            this.pictureBxResource.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBxResource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBxResource.Location = new System.Drawing.Point(622, 26);
+            this.pictureBxResource.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.pictureBxResource.Name = "pictureBxResource";
+            this.pictureBxResource.Size = new System.Drawing.Size(149, 141);
+            this.pictureBxResource.TabIndex = 2;
+            this.pictureBxResource.TabStop = false;
+            // 
+            // txtBxPriceValue
+            // 
+            this.txtBxPriceValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtBxPriceValue.BackColor = System.Drawing.Color.White;
+            this.txtBxPriceValue.Location = new System.Drawing.Point(204, 138);
+            this.txtBxPriceValue.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtBxPriceValue.Name = "txtBxPriceValue";
+            this.txtBxPriceValue.Size = new System.Drawing.Size(195, 24);
+            this.txtBxPriceValue.TabIndex = 1;
+            this.txtBxPriceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFurnizorName
+            // 
+            this.lblFurnizorName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblFurnizorName.AutoSize = true;
+            this.lblFurnizorName.Location = new System.Drawing.Point(73, 25);
+            this.lblFurnizorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFurnizorName.Name = "lblFurnizorName";
+            this.lblFurnizorName.Size = new System.Drawing.Size(57, 16);
+            this.lblFurnizorName.TabIndex = 0;
+            this.lblFurnizorName.Text = "Furnizor";
             // 
             // menuStrip1
             // 
@@ -381,6 +388,16 @@
             this.MainLayoutPanel.Size = new System.Drawing.Size(784, 511);
             this.MainLayoutPanel.TabIndex = 0;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(772, 217);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Details";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // MainWindows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -443,6 +460,7 @@
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel MainLayoutPanel;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 

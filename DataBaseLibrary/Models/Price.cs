@@ -22,7 +22,9 @@ namespace DataBaseLibrary.Models
         [Required]
         public DateTime Data { get; set; }
 
-        
+
+        public string Details { get; set; }
+
         public Furnizor Furnizor { get; set; }
     }
 }

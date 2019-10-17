@@ -6,15 +6,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DataBaseLibrary.Models
 {
     [Table("ImageTable")]
-    public class Image
-    {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long ImageId { get; set; }
+    public class Image:IName
 
-        [Required]
+    {
+    [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public long ImageId { get; set; }
+
+    [Required]
+    [Index(IsUnique = true)]
+    [MaxLength(50), MinLength(1)]
         public string Name { get; set; }
 
-        public byte[] File { get; set; }
+    public byte[] File { get; set; }
 
     }
 }

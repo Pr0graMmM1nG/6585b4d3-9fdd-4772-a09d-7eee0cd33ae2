@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 namespace DataBaseLibrary.Models
 {
     [Table("UnitsTable")]
-    public class Units
+    public class Units:IName
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long UnitsId { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
+        [MaxLength(50), MinLength(1)]
         public string Name { get; set; }
 
     }

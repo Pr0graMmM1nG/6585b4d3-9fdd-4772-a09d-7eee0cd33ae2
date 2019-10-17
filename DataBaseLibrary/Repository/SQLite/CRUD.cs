@@ -22,6 +22,7 @@ namespace DataBaseLibrary.Repository.SQLite
             var entry = _context.Set<T>().Find(idParam);
             return entry;
         }
+ 
         public IEnumerable<T> GetAll<T>() where T : class
         {
             return _context.Set<T>();
@@ -42,7 +43,18 @@ namespace DataBaseLibrary.Repository.SQLite
             _context.Entry(entry).State = EntityState.Modified;
         }
 
-
+        public void BeginTransaction()
+        {
+             _context.Database.BeginTransaction();
+        }
+        public void CommitTransaction()
+        {
+            _context.Database.CurrentTransaction.Commit();
+        }
+        public void RollbackTransaction()
+        {
+            _context.Database.CurrentTransaction.Rollback();
+        }
         public void Save()
         {
             _context.SaveChanges();

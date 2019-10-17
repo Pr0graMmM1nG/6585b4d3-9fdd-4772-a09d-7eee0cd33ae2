@@ -23,8 +23,8 @@ namespace DataBaseLibrary.Context
             Database.SetInitializer(sqliteConnectionInitializer);
 
         }
-
        
+
 
     }
 }
